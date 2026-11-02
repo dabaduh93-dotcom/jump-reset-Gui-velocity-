@@ -6,21 +6,20 @@ import java.io.IOException;
 
 public class VelocityGUI extends GuiScreen {
 
-    private int chance = 75;
-    private int velocity = 100;
-
     @Override
     public void initGui() {
         buttonList.clear();
 
         buttonList.add(new GuiButton(
             0, width / 2 - 100, height / 2 - 40,
-            200, 20, "Chance: " + chance + "%"
+            200, 20,
+            "Chance: " + VelocityHandler.chance + "%"
         ));
 
         buttonList.add(new GuiButton(
             1, width / 2 - 100, height / 2 - 10,
-            200, 20, "Velocity: " + velocity + "%"
+            200, 20,
+            "Velocity: " + VelocityHandler.velocity + "%"
         ));
 
         buttonList.add(new GuiButton(
@@ -34,13 +33,19 @@ public class VelocityGUI extends GuiScreen {
             throws IOException {
 
         if (button.id == 0) {
-            chance += 5;
-            if (chance > 100) chance = 0;
+            VelocityHandler.chance += 5;
+
+            if (VelocityHandler.chance > 100) {
+                VelocityHandler.chance = 0;
+            }
         }
 
         if (button.id == 1) {
-            velocity += 10;
-            if (velocity > 200) velocity = 0;
+            VelocityHandler.velocity += 10;
+
+            if (VelocityHandler.velocity > 200) {
+                VelocityHandler.velocity = 0;
+            }
         }
 
         if (button.id == 2) {
