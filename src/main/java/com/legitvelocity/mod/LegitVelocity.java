@@ -27,8 +27,7 @@ public class LegitVelocity {
             "LegitVelocity"
         );
 
-        net.minecraftforge.fml.client.registry
-            .ClientRegistry.registerKeyBinding(openGui);
+        net.minecraftforge.fml.client.registry.ClientRegistry.registerKeyBinding(openGui);
 
         FMLCommonHandler.instance().bus().register(this);
     }
