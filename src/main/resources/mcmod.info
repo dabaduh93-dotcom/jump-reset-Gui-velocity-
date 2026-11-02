@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "legitvelocity",
+    "name": "LegitVelocity",
+    "description": "Configurable velocity test mod.",
+    "version": "1.0",
+    "mcversion": "1.8.9",
+    "authorList": ["LegitVelocity"],
+    "credits": "",
+    "logoFile": "",
+    "url": "",
+    "updateUrl": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
